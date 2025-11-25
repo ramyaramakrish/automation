@@ -1,0 +1,90 @@
+
+--------------------------------------------
+1. Java Project Structure
+--------------------------------------------
+
+Proj-name
+|
+|-- p1 ( .java / .class files )
+|
+|-- p2
+| |
+| |--p21
+
+--------------------------------------------
+2. Java File Structure
+--------------------------------------------
+
+|------------------------------------------------------------------
+|public TypeName.java
+|------------------------------------------------------------------
+|// package statement ( optional ) - 1
+|// import statements ( optional ) - 0..n
+|
+|// public Type ( interface | class | enum | annotation | record ) ( Must) - 1
+|// default Types( interface | class | enum | annotation | record ) ( optional ) - 0..n
+|------------------------------------------------------------------
+
+
+--------------------------------------------
+3. Package Statement
+--------------------------------------------
+
+why we use package statement?
+  
+  -> to group related types together
+  -> to avoid type name conflicts
+  -> to control access
+
+syntax:
+
+package package_name;
+package level1.level2.level3;
+
+e.g. 
+Account.java -> module1 -> project1 -> npci -> com
+package com.npci.project1.module1;
+
+--------------------------------------------
+4. import Statement
+--------------------------------------------
+
+why we use import statement?
+  
+  -> to use types of other packages in the current package
+
+project1
+|-- p1
+|    |-- A.java
+|    |-- B.java
+|-- p2
+|     |-- C.java
+|     |-- D.java
+|  |--p21
+|     |-- G.java
+|-- p3
+      |-- E.java
+      |-- F.java
+      |-- C.java
+
+e.g A.java
+
+package p1;
+//import p2.C;
+//import p2.D;
+// or
+import p2.*;
+import p2.p21.*;
+import p3.*;
+public class A{
+   //code
+   B b;
+   p3.C c;
+   D d;
+   G g;
+}     
+
+
+--------------------------------------------
+OO Concepts
+--------------------------------------------
