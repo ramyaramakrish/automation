@@ -6,26 +6,15 @@ public class Application {
 
         System.out.println(Thread.currentThread().getName() + " : Application started");
 
-        Account a1 = new Account();
-        // display account details
-        System.out.println("Account Number: " + a1.accountNumber);
-        System.out.println("Holder Name: " + a1.holderName);
-        System.out.println("Balance: " + a1.balance);
+        Account a1 = new Account("A101");
+        // later initialization
+        a1.holderName = "Nag";
+        a1.balance = 5000;
 
-        // set account details
-        a1.accountNumber = "ACC12345";
-        a1.holderName = "John Doe";
-        a1.balance = 1000.50;
+        Account a2 = new Account("A102", "Riya");
+        a2.balance = 7000;
 
-        // display updated account details
-        System.out.println("Updated Account Number: " + a1.accountNumber);
-        System.out.println("Updated Holder Name: " + a1.holderName);
-        System.out.println("Updated Balance: " + a1.balance);
-
-        // deposit amount
-        double depositAmount = 500.00;
-        a1.balance += depositAmount;
-        System.out.println("Balance after depositing " + depositAmount + ": " + a1.balance);
+        Account a3 = new Account("A103", "dia", 9000);
 
     }
 
