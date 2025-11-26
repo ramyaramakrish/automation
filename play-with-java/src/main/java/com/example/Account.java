@@ -33,8 +33,31 @@ public class Account {
         this.holderName = holderName;
         this.balance = balance;
     }
+
     // methods
-    // inner class(es)
+
+    // Method to deposit money
+    void deposit(double amount) {
+        this.balance = this.balance + amount;
+        System.out.println("Deposited Rs." + amount + " | New Balance: Rs." + this.balance);
+    }
+
+    // Method to withdraw money
+    // Method to withdraw money
+    void withdraw(double amount) {
+        if (amount <= this.balance) {
+            this.balance = this.balance - amount;
+            System.out.println("Withdrawn Rs." + amount + " | New Balance: Rs." + this.balance);
+        } else {
+            System.out.println("Insufficient balance!");
+        }
+    }
+
+    // Method to check balance
+    void checkBalance() {
+        System.out.println("Current Balance: Rs." + this.balance);
+    }
+
 }
 
 // default Type(s) ( class declaration )
