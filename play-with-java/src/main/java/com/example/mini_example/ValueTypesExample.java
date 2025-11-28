@@ -1,6 +1,6 @@
-package com.example.mini_examples;
+package com.example.mini_example;
 
-public class ValueTypes {
+public class ValueTypesExample {
     public static void main(String[] args) {
 
         // Value Types

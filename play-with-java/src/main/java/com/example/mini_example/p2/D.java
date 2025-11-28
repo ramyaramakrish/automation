@@ -1,6 +1,6 @@
-package com.example.mini_examples.p2;
+package com.example.mini_example.p2;
 
-import com.example.mini_examples.p1.A;
+import com.example.mini_example.p1.A;
 
 public class D extends A {
 

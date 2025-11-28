@@ -4,13 +4,14 @@ package com.example;
  * author: Nagendra Kumar
  */
 
-public class Account {
+public abstract class Account {
+
     // fields
     private String accountNumber;// null
     private String holderName; // null
     protected double balance; // 0.0
 
-    // constructor(s)
+    // constructor overloading
     public Account(String accountNumber) {
         // validation logics
         // init logics
@@ -34,10 +35,24 @@ public class Account {
         this.balance = balance;
     }
 
-    // Method to deposit money
+    // method overloading
+    // version 1: Simple deposit
     public void deposit(double amount) {
         this.balance = this.balance + amount;
         System.out.println("Deposited Rs." + amount + " | New Balance: Rs." + this.balance);
+    }
+
+    // Version 2: Deposit with remarks
+    public void deposit(double amount, String remarks) {
+        this.balance = this.balance + amount;
+        System.out.println("Deposited Rs." + amount + " | Remarks: " + remarks + " | New Balance: Rs." + this.balance);
+    }
+
+    // Version 3: Deposit via cheque
+    public void deposit(double amount, String chequeNo, String bankName) {
+        balance += amount;
+        System.out.println("Cheque deposited: Rs." + amount +
+                " | Cheque: " + chequeNo + " | Bank: " + bankName);
     }
 
     // Method to withdraw money
@@ -74,5 +89,3 @@ public class Account {
     }
 
 }
-
-// default Type(s) ( class declaration )

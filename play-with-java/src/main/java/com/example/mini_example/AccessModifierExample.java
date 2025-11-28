@@ -1,10 +1,21 @@
-package com.example.mini_examples;
+package com.example.mini_example;
 
-import com.example.mini_examples.p1.A;
-import com.example.mini_examples.p1.B;
-import com.example.mini_examples.p1.C;
-import com.example.mini_examples.p2.D;
-import com.example.mini_examples.p2.E;
+import com.example.mini_example.p1.A;
+import com.example.mini_example.p1.B;
+import com.example.mini_example.p1.C;
+import com.example.mini_example.p2.D;
+import com.example.mini_example.p2.E;
+
+// proj
+//     |
+//     |-- p1
+//     |   - A.java
+//     |   - B.java extends A
+//     |   - C.java
+//     |
+//     |-- p2
+//         - D.java extends C
+//         - E.java
 
 public class AccessModifierExample {
 

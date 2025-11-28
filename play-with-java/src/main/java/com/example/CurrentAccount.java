@@ -1,6 +1,6 @@
 package com.example;
 
-public class CurrentAccount extends Account {
+public final class CurrentAccount extends Account {
 
     private double overdraftLimit;
 

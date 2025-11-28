@@ -1,4 +1,4 @@
-package com.example.mini_examples.p1;
+package com.example.mini_example.p1;
 
 public class A {
 
