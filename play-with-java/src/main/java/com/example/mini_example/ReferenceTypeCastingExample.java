@@ -6,14 +6,14 @@ class V {
     }
 }
 
-class B extends V {
+class Bus extends V {
     @Override
     void start() {
-        System.out.println("B type Vehicle started");
+        System.out.println("Bus type Vehicle started");
     }
 }
 
-class C extends V {
+class Car extends V {
     @Override
     void start() {
         System.out.println("C type Vehicle started");
@@ -24,7 +24,7 @@ class C extends V {
     }
 }
 
-class Bus extends V {
+class Bike extends V {
     @Override
     void start() {
         System.out.println("Bus type Vehicle started");
@@ -46,8 +46,8 @@ class Mechanic {
     public void repair(V v) {
         System.out.println("Servicing Vehicle of type: ");
         v.start();
-        if (v instanceof C) {
-            C c = (C) v; // Downcasting
+        if (v instanceof Car) {
+            Car c = (Car) v; // Downcasting
             c.startAc();
         }
     }
@@ -57,19 +57,14 @@ public class ReferenceTypeCastingExample {
 
     public static void main(String[] args) {
 
-        B b = new B();
-        C c = new C();
+        Bus b = new Bus();
+        Car c = new Car();
         Bus bus = new Bus();
 
         Mechanic mechanic = new Mechanic();
         mechanic.repair(b); // Servicing B type vehicle
         mechanic.repair(c); // Repairing C type vehicle
         mechanic.repair(bus); // Servicing Bus type vehicle
-
-        // --------------
-
-        int n = 456;
-        byte by = (byte) n;
 
     }
 

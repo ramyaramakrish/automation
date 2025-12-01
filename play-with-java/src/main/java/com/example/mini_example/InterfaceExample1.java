@@ -26,7 +26,7 @@ class JKWheel implements Wheel {
     }
 }
 
-class Car {
+class C {
     // HAS-A relationship
     // MRFWheel wheel = new MRFWheel();
     // JKWheel wheel = new JKWheel();
@@ -47,13 +47,12 @@ public class InterfaceExample1 {
 
     public static void main(String[] args) {
 
-        Car myCar = new Car();
+        C myCar = new C();
         MRFWheel mrfWheel = new MRFWheel();
         JKWheel jkWheel = new JKWheel();
         myCar.setWheel(mrfWheel);
         myCar.move();
 
-        // after 25km
         myCar.setWheel(jkWheel);
 
         myCar.move();

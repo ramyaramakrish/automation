@@ -1,21 +1,18 @@
 package com.example.mini_example;
 
 /*
-
-    getTotalPrice(cartItems): double
-
+    shop-billing-system
+    ---------------------------
     component(s)
         - PriceMatrix
             - getPrice(itemId): double
         - BillingService
             - getTotalPrice(cartItems): double
-
 */
 
 //-------------------------------------------------
 // Interface PriceMatrix
 //-------------------------------------------------
-// author : senior-dev
 interface PriceMatrix {
     double getPrice(String itemId);
 }
@@ -23,8 +20,6 @@ interface PriceMatrix {
 // ----------------------------------------
 // Excelsheet PriceMatrix
 // ----------------------------------------
-// author : dev-1.1
-
 class ExcelsheetPriceMatrix implements PriceMatrix {
     public double getPrice(String itemId) {
         // Simulate fetching price from an Excel sheet
@@ -40,8 +35,6 @@ class ExcelsheetPriceMatrix implements PriceMatrix {
 // ------------------------------------------------
 // Database PriceMatrix
 // ------------------------------------------------
-// author : dev-1.2
-
 class DatabasePriceMatrix implements PriceMatrix {
     public double getPrice(String itemId) {
         // Simulate fetching price from a database
@@ -57,7 +50,6 @@ class DatabasePriceMatrix implements PriceMatrix {
 // ------------------------------------------------
 // BillingService
 // ------------------------------------------------
-// author : dev-2
 
 interface BillingService {
     double getTotalPrice(String[] cartItems);
