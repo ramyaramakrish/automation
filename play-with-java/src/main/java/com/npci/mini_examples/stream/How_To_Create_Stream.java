@@ -1,4 +1,4 @@
-package com.npci.stream;
+package com.npci.mini_examples.stream;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.npci;
+package com.npci.mini_examples;
 
 import java.util.Arrays;
 import java.util.HashMap;

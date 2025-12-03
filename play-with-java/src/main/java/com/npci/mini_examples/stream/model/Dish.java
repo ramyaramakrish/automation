@@ -1,4 +1,4 @@
-package com.npci.stream.model;
+package com.npci.mini_examples.stream.model;
 
 
 import java.util.Arrays;

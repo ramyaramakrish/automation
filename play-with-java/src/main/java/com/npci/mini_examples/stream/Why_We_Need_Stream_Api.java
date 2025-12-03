@@ -1,7 +1,7 @@
-package com.npci.stream;
+package com.npci.mini_examples.stream;
 
 
-import com.npci.stream.model.Dish;
+import com.npci.mini_examples.stream.model.Dish;
 
 import java.util.ArrayList;
 import java.util.Collections;
