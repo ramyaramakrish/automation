@@ -38,7 +38,7 @@ public class Dish {
     }
 
     public String toString() {
-        return name;
+        return "[" + name + ", " + vegetarian + ", " + calories + ", " + type + "]";
     }
 
     public static final List<Dish> menu =
