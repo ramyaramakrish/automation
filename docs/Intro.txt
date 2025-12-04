@@ -1,0 +1,17 @@
+
+
+Learning Java
+------------------------------
+
+-> know how to bring data into memory
+-> know how to process data
+
+-----------------------------------
+
+Data Types in Java
+------------------------------
+
+-> simple-types/primitives-> values
+-> complex-types/reference-> objects
+
+-----------------------------------
