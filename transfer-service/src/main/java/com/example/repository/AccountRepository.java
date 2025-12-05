@@ -21,7 +21,7 @@ public interface AccountRepository {
      * @return Account if found
      * @throws AccountNotFoundException if account doesn't exist
      */
-    Account loadAccountById(String accountId);
+    Optional<Account> loadAccountById(String accountId);
 
     /**
      * Save/Update account details

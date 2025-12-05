@@ -43,20 +43,18 @@ public class SqlAccountRepository implements AccountRepository {
     }
 
     @Override
-    public Account loadAccountById(String accountId) {
+    public Optional<Account> loadAccountById(String accountId) {
         System.out.println("[DB] Loading account: " + accountId);
 
         Account account = accountStore.get(accountId);
         if (account == null) {
-            throw new RuntimeException("Account not found: " + accountId);
+            return Optional.empty();
         }
 
         // Return a copy to simulate DB fetch (new object each time)
-        return new Account(
-                account.getAccountId(),
-                account.getAccountHolderName(),
-                account.getBalance()
-        );
+        return Optional.of(new Account(account.getAccountId(),
+                                       account.getAccountHolderName(),
+                                       account.getBalance()));
     }
 
     @Override
@@ -79,6 +77,6 @@ public class SqlAccountRepository implements AccountRepository {
         if (accountId == null) {
             return Optional.empty();
         }
-        return Optional.of(loadAccountById(accountId));
+        return loadAccountById(accountId);
     }
 }

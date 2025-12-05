@@ -72,8 +72,10 @@ public class UPITransferService {
         }
 
         // Step 3: Load accounts (using injected repository)
-        Account fromAccount = accountRepository.loadAccountById(fromAccountId);
-        Account toAccount = accountRepository.loadAccountById(toAccountId);
+        Account fromAccount = accountRepository.loadAccountById(fromAccountId)
+                .orElseThrow(()-> new RuntimeException("Sender account not found: " + fromAccountId));
+        Account toAccount = accountRepository.loadAccountById(toAccountId)
+                .orElseThrow(()-> new RuntimeException("Receiver account not found: " + toAccountId));
 
         System.out.println("[TRANSFER] Sender Balance: ₹" + fromAccount.getBalance());
         System.out.println("[TRANSFER] Receiver Balance: ₹" + toAccount.getBalance());
